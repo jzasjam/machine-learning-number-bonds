@@ -4,6 +4,18 @@ import time
 # Use matplotlib to chart the progress of the machine
 import matplotlib.pyplot as plt
 
+# Text Colours
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 # Set the initial number bonds all to 5
 bonds = [5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0]
 
@@ -25,7 +37,7 @@ while True:
 
     # Output the Chosen Number
     print('--------------------------------------------')
-    print('>>> Chosen Number is ' + str(number) + ' <<<')
+    print(bcolors.BOLD  + '>>> Chosen Number is ' + str(number) + ' <<<' + bcolors.ENDC)
     print('--------------------------------------------')
     counter += 1
     if(counter == 1):
@@ -49,9 +61,9 @@ while True:
     # Machines Guess
     print('> Machine says: The bond to 10 is ' + str(round(bonds[number])))
     if number + round(bonds[number]) == 10:
-        print(' + Machine is: CORRECT!')
+        print(bcolors.OKGREEN  + ' + Machine is: CORRECT!' + bcolors.ENDC)
     else:
-        print(' - Machine is: WRONG (more training needed)')
+        print(bcolors.FAIL + ' - Machine is: WRONG (more training needed)' + bcolors.ENDC)
 
     time.sleep(0.5)
 
