@@ -2,4 +2,4 @@
 ===========================================
 
 Google Colab Examples:
-> [numberbands-plotted.py](https://colab.research.google.com/drive/1VT8wlaRurIdTIV0aHpTCnFvDJZZr4jo3?usp=sharing)
+> [numberbonds-plotted.py](https://colab.research.google.com/drive/1VT8wlaRurIdTIV0aHpTCnFvDJZZr4jo3?usp=sharing)
